@@ -860,8 +860,8 @@ open class Targets : Element(-46.0, -40.0, 1F, Side(Side.Horizontal.MIDDLE, Side
         //background is halal
 
         //curved sides
-        RenderUtils.drawRoundedCornerRect(0f, 0f, 12f, 40f, 3f, ColorUtils.hslRainbow(6, indexOffset = 10).rgb)
-        RenderUtils.drawRoundedCornerRect(28f, 0f, 40f, 40f, 3f, ColorUtils.hslRainbow(35, indexOffset = 10).rgb)
+        RenderUtils.drawRoundedCornerRect(0f, 0f, 12f, 45f, 3f, ColorUtils.hslRainbow(6, indexOffset = 10).rgb)
+        RenderUtils.drawRoundedCornerRect(120f, 0f, 128f, 45f, 3f, ColorUtils.hslRainbow(35, indexOffset = 10).rgb)
 
         //rain bowwww
 
@@ -873,12 +873,12 @@ open class Targets : Element(-46.0, -40.0, 1F, Side(Side.Horizontal.MIDDLE, Side
         GL11.glShadeModel(7425)
 
         //stop pos mometno
-        val stopPos = 34 + additionalWidth.toInt()
+        val stopPos = 50 + additionalWidth.toInt()
 
         //draw
         for (i in 6..stopPos step 5) {
             val x1 = (i + 5).coerceAtMost(stopPos).toDouble()
-            RenderUtils.quickDrawGradientSidewaysH(i.toDouble(), 0.0, x1, 40.0,
+            RenderUtils.quickDrawGradientSidewaysH(i.toDouble(), 0.0, x1, 45.0,
                 ColorUtils.hslRainbow(i, indexOffset = 10).rgb, ColorUtils.hslRainbow(x1.toInt(), indexOffset = 10).rgb)
         }
 
@@ -928,8 +928,8 @@ open class Targets : Element(-46.0, -40.0, 1F, Side(Side.Horizontal.MIDDLE, Side
 
 
         //hp bar
-        RenderUtils.drawRoundedCornerRect(40f, 28f, 40f + additionalWidth, 33f, 2.5f, Color(40, 40, 40, 200).rgb)
-        RenderUtils.drawRoundedCornerRect(40f, 28f, 40f + (easingHP / target.maxHealth) * additionalWidth, 33f, 2.5f, Color(220, 220, 220, 200).rgb)
+        RenderUtils.drawRoundedCornerRect(40f, 32f, 44f + additionalWidth, 40f, 2.5f, Color(40, 40, 40, 200).rgb)
+        RenderUtils.drawRoundedCornerRect(40f, 32f, 44f + (easingHP / target.maxHealth) * additionalWidth, 40f, 2.5f, Color(220, 220, 220, 200).rgb)
     }
 
     private fun drawChill(entity: EntityLivingBase) {
