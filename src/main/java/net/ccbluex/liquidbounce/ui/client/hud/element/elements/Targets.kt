@@ -861,7 +861,7 @@ open class Targets : Element(-46.0, -40.0, 1F, Side(Side.Horizontal.MIDDLE, Side
 
         //curved sides
         RenderUtils.drawRoundedCornerRect(0f, 0f, 12f, 45f, 3f, ColorUtils.hslRainbow(6, indexOffset = 10).rgb)
-        RenderUtils.drawRoundedCornerRect(120f, 0f, 128f, 45f, 3f, ColorUtils.hslRainbow(35, indexOffset = 10).rgb)
+        RenderUtils.drawRoundedCornerRect(120f, 0f, 128f, 45f, 3f, ColorUtils.hslRainbow(129, indexOffset = 10).rgb)
 
         //rain bowwww
 
@@ -920,16 +920,16 @@ open class Targets : Element(-46.0, -40.0, 1F, Side(Side.Horizontal.MIDDLE, Side
 
 
         // info text
-        font.drawCenteredString(target.name, 40 + ((additionalWidth - font.getStringWidth(target.name)) / 2f), 5f, Color.WHITE.rgb, false)
+        font.drawCenteredString(target.name, 45 + (additionalWidth) / 2f), 5f, Color.WHITE.rgb, false)
         val infoStr = ((((easingHP / target.maxHealth) * 100).roundToInt()).toString() + " - " + ((mc.thePlayer.getDistanceToEntityBox(target)).roundToInt()).toString() + "M")
 
-        font.drawString(infoStr, 40f + ((additionalWidth - font.getStringWidth(infoStr)) / 2f), 36f - font.FONT_HEIGHT, Color.WHITE.rgb, false)
+        font.drawString(infoStr, 40f + ((additionalWidth - font.getStringWidth(infoStr)) / 2f), 10f - font.FONT_HEIGHT, Color.WHITE.rgb, false)
 
 
 
         //hp bar
-        RenderUtils.drawRoundedCornerRect(40f, 32f, 44f + additionalWidth, 40f, 2.5f, Color(40, 40, 40, 200).rgb)
-        RenderUtils.drawRoundedCornerRect(40f, 32f, 44f + (easingHP / target.maxHealth) * additionalWidth, 40f, 2.5f, Color(220, 220, 220, 200).rgb)
+        RenderUtils.drawRoundedCornerRect(44f, 32f, 44f + additionalWidth, 38f, 2.5f, Color(60, 60, 60, 200).rgb)
+        RenderUtils.drawRoundedCornerRect(44f, 32f, 44f + (easingHP / target.maxHealth) * additionalWidth, 38f, 2.5f, Color(180, 180, 180, 200).rgb)
     }
 
     private fun drawChill(entity: EntityLivingBase) {
